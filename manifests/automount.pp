@@ -31,7 +31,7 @@ class gluster::automount {
     require ::automount
     $selmoduledir = "/usr/share/selinux/targeted"
     file { "${selmoduledir}/gluster_automount.pp":
-        owner => root, group => 0, mode => 0644,
+        owner => root, group => 0, mode => '0644',
         source => "puppet:///modules/gluster/\
 gluster_automount.selinux.pp",
     }
